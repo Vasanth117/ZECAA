@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Settings - ZECA App</title>
+    <link rel="stylesheet" href="settttting.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="WhatsApp Image 2024-10-04 at 20.03.21_66e4439e.jpg">
+        <h2>ZECA Nation</h2>
+      
+        <ul>
+          <li><a href="maninn.html">Actions</a></li>
+          <li><a href="profffffile.html">Profile</a></li>
+          <li><a href="challengeees.html">Challenges</a></li>
+          <li><a href="activity.html">Activities</a></li>
+          <li><a href="notification.html">Notifications</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+          <li><a href="setttttting.html">Settings</a></li>
+        </ul>
+      </div>
+
+<div class="settings-container">
+    <header>
+        <h1>Settings</h1>
+    </header>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="togglePrivacy()">
+            <span>Account Privacy</span>
+        </button>
+        <div id="privacyOptions" class="sub-section" style="display: none;">
+            <label><input type="checkbox" id="privateAccount"> Private Account</label><br>
+            <label><input type="checkbox" id="showOnlineStatus"> Show Online Status</label>
+        </div>
+    </div>
+   
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="toggleLanguage()">
+            <span>Language</span>
+        </button>
+        <div id="languageOptions" class="sub-section" style="display: none;">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option vaalue="tam">Tamil</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="toggleAccountTypes()">
+            <span>Account Types and Tools</span>
+        </button>
+        <div id="accountTypeOptions" class="sub-section" style="display: none;">
+            <label><input type="radio" name="accountType" value="personal"> Personal</label><br>
+            <label><input type="radio" name="accountType" value="business"> Business</label><br>
+            <label><input type="radio" name="accountType" value="creator"> Creator</label>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="togglePrivacyCenter()">
+            <span>Privacy Center</span>
+        </button>
+        <div id="privacyCenterOptions" class="sub-section" style="display: none;">
+            <p>Manage your data and review privacy settings.</p>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="toggleAccountStatus()">
+            <span>Account Status</span>
+        </button>
+        <div id="accountStatusOptions" class="sub-section" style="display: none;">
+            <p>Status: Active</p>
+            <p>Review any restrictions or limitations.</p>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="toggleAbout()">
+            <span>About</span>
+        </button>
+        <div id="aboutOptions" class="sub-section" style="display: none;">
+            <p>ZECA App v1.0.0</p>
+            <p>Learn more about ZECA and our mission.</p>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="addAccount()">
+            <span>Add Account</span>
+        </button>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="logout()">
+            <span>Logout</span>
+        </button>
+    </div>
+
+    <div class="settings-section">
+        <button class="settings-item" onclick="toggleHelp()">
+            <span>Help</span>
+        </button>
+        <div id="helpOptions" class="sub-section" style="display: none;">
+            <p>Contact support or visit our help center for assistance.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="setttting.js"></script>
+</body>
+</html>

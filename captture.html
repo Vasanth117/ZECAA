@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capture - ZECA App</title>
+    <link rel="stylesheet" href="captture.css">
+</head>
+<body>
+
+<div class="capture-container">
+    <div class="header">
+        <label for="photoUpload" class="camera-icon">
+            <img src="WhatsApp_Image_2024-11-12_at_23.15.37_c8b8913d-removebg-preview.png" alt="Camera Icon">
+        </label>
+        <input type="file" id="photoUpload" accept="image/*" style="display: none" onchange="previewImage(event)">
+        <p class="caption">Add a photo...</p>
+    </div>
+
+    <div class="image-preview" id="imagePreview">
+    </div>
+
+    <div class="description">
+        <textarea id="taskDescription" placeholder="Tell something about your task..."></textarea>
+    </div>
+
+    <div class="action-button">
+        <button onclick="submitCapture()"> Capture</button>
+    </div>
+</div>
+
+<script src="captture.js"></script>
+</body>
+</html>

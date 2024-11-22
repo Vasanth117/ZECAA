@@ -1,0 +1,327 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.settings-section {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.settings-item {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.settings-item:hover {
+    background-color: #e0e0e0;
+}
+
+.sub-section {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sub-section p {
+    margin: 0;
+    color: #555;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f8f5;
+    overflow-x: hidden;
+  }
+  .sidebar {
+    width: 250px;
+    background-color: #2baf6b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    
+    
+  }
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  .sidebar ul {
+    list-style: none;
+  }
+  .sidebar ul li {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  .sidebar ul li:hover {
+    background-color: #28a863;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+  .sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  .sidebar ul li:hover a {
+    color: #d1f7c4;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #2baf6b;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .header h1 {
+    margin-left: 20px;
+  }
+  .header h1 span {
+    animation: slideIn 0.8s ease-in-out;
+  }
+  .welcome-section {
+    background-color: #34a853;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+  }
+  .actions h2 {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .actions h2::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: #34a853;
+    left: 0;
+    bottom: -5px;
+    border-radius: 2px;
+    animation: grow 0.6s ease forwards;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .search-bar input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  .search-bar input:focus {
+    border-color: #34a853;
+    box-shadow: 0 0 5px rgba(52, 168, 83, 0.5);
+  }
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #34a853;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .tabs button:hover {
+    color: #2baf6b;
+    transform: scale(1.1);
+  }
+  .tabs button.active {
+    border-bottom: 2px solid #34a853;
+    font-weight: bold;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+ 
+  }
+  .card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .card h3 {
+    color: #34a853;
+    margin: 15px 0 10px;
+  }
+  .card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-header h2 {
+    color: #4caf50;
+  }
+
+  .close-modal {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .section h3 {
+    color: #4caf50;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  .save-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50px;
+    }
+  }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Reduction Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .calculator-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      color: #4caf50;
+    }
+    .form-group {
+      margin: 15px 0;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .calculate-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .calculate-btn:hover {
+      background-color: #388e3c;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container">
+  <h2>Carbon Footprint Reduction Calculator</h2>
+  
+  <div class="form-group">
+    <label for="reducedMiles">Reduce Driving (miles per week)</label>
+    <input type="number" id="reducedMiles" placeholder="e.g., 10" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="renewableEnergy">Switch to Renewable Energy (kWh per month)</label>
+    <input type="number" id="renewableEnergy" placeholder="e.g., 200" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="meatlessMeals">Reduce Meat-based Meals (per week)</label>
+    <input type="number" id="meatlessMeals" placeholder="e.g., 3" required>
+  </div>
+  
+  <button class="calculate-btn" onclick="calculateReduction()">Calculate Reduction</button>
+  
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateReduction() {
+    const reducedMiles = parseFloat(document.getElementById('reducedMiles').value);
+    const renewableEnergy = parseFloat(document.getElementById('renewableEnergy').value);
+    const meatlessMeals = parseFloat(document.getElementById('meatlessMeals').value);
+    const carReductionFactor = 0.404; 
+    const renewableEnergyFactor = 0.92; 
+    const meatReductionFactor = 7.2; 
+    const drivingReduction = reducedMiles * carReductionFactor * 52;
+    const energyReduction = renewableEnergy * renewableEnergyFactor * 12;
+    const meatReduction = meatlessMeals * meatReductionFactor * 52;
+    const totalReduction = drivingReduction + energyReduction + meatReduction;
+    document.getElementById('result').innerText = `Your potential carbon Reduction is approximately ${totalReduction.toFixed(2)} kg CO₂.`;
+  }
+</script>
+
+</body>
+</html>

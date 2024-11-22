@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #004d40;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #00796b;
+}
+
+.navbar a {
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #004d40;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+.challenge-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.challenge-section {
+    margin-top: 20px;
+}
+
+.challenge-section h2 {
+    font-size: 24px;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+.action {
+    background-color: #e0f2f1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.action h3 {
+    font-size: 20px;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.action p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+footer {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #e0f2f1;
+}

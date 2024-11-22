@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZECA - Login</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      background: linear-gradient(-45deg, #00c6ff, #0072ff, #00ff88, #1e3c72);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00c6ff;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-container button:hover {
+      background-color: #0072ff;
+    }
+    .login-container a {
+      display: block;
+      margin-top: 10px;
+      color: #0072ff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>USER INTERFACE</h2>
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button onclick="validateLogin()">Login</button>
+  <a href="#">Forgot Password?</a>
+</div>
+
+<script>
+  
+  function validateLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    if (username === "ZAV-JD@gmail.com" && password === "password") {
+      window.location.href = "maninn.html"; 
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+</script>
+
+</body>
+</html>

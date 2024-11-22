@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn the App - ZECA</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #111;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .privacy-section {
+      margin-top: 40px;
+    }
+    .privacy-section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    .privacy-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .privacy-card img {
+      width: 30px;
+      height: 30px;
+    }
+    .privacy-card p {
+      font-size: 14px;
+      color: #333;
+      margin-left: 10px;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .footer input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .footer button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .footer button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Learn the App - ZECA</h2>
+  <div class="container">
+    <div class="card">
+      <img src="https://example.com/icon1.png" alt="Icon 1">
+      <h3>Logging Actions</h3>
+      <p>Track your eco-friendly actions to reduce carbon footprint.</p>
+    </div>
+    <div class="card">
+      <img src="https://example.com/icon2.png" alt="Icon 2">
+      <h3>Participate in Challenges</h3>
+      <p>Engage in challenges with friends to make a difference.</p>
+    </div>
+    <div class="card">
+      <img src="https://example.com/icon3.png" alt="Icon 3">
+      <h3>Be Inspired</h3>
+      <p>See what others are doing and join the movement.</p>
+    </div>
+    <div class="card">
+      <img src="https://example.com/icon4.png" alt="Icon 4">
+      <h3>Unlock Goals</h3>
+      <p>Achieve milestones and celebrate your progress.</p>
+    </div>
+  </div>
+
+  <div class="privacy-section">
+    <h2>We take your privacy seriously</h2>
+    <div class="privacy-card">
+      <img src="https://example.com/privacy-icon1.png" alt="Privacy Icon 1">
+      <p>We only collect necessary information.</p>
+    </div>
+    <div class="privacy-card">
+      <img src="https://example.com/privacy-icon2.png" alt="Privacy Icon 2">
+      <p>We don’t sell your information.</p>
+    </div>
+    <div class="privacy-card">
+      <img src="https://example.com/privacy-icon3.png" alt="Privacy Icon 3">
+      <p>Your information is stored securely.</p>
+    </div>
+    <div class="privacy-card">
+      <img src="https://example.com/privacy-icon4.png" alt="Privacy Icon 4">
+      <p>View our full Privacy Policy for more details.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <input type="checkbox" id="agree">
+    <label for="agree">I have read and understand the Privacy Policy</label>
+    <button onclick="continueToApp()">Continue</button>
+  </div>
+
+  <script>
+    function continueToApp() {
+      const checkbox = document.getElementById("agree");
+      if (checkbox.checked) {
+        window.location.href = "maninn.html";
+      } else {
+        alert("Please agree to the Privacy Policy to continue.");
+      }
+    }
+  </script>
+
+</body>
+</html>

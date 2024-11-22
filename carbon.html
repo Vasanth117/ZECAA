@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carbon Footprint Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .calculator-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+    h2 {
+      color: #00796b;
+    }
+    .form-group {
+      margin: 15px 0;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #004d40;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .calculate-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #00796b;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .calculate-btn:hover {
+      background-color: #004d40;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #00796b;
+    }
+  </style>
+</head>
+<body>
+<div class="calculator-container">
+  <h2>Carbon Footprint Calculator</h2>
+  
+  <div class="form-group">
+    <label for="milesDriven">Miles Driven (per week)</label>
+    <input type="number" id="milesDriven" placeholder="e.g., 50" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="electricity">Electricity Usage (kWh per month)</label>
+    <input type="number" id="electricity" placeholder="e.g., 300" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="meatMeals">Meat-based Meals (per week)</label>
+    <input type="number" id="meatMeals" placeholder="e.g., 7" required>
+  </div>
+  
+  <button class="calculate-btn" onclick="calculateFootprint()">Calculate</button>
+  
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateFootprint() {
+    const milesDriven = parseFloat(document.getElementById('milesDriven').value);
+    const electricity = parseFloat(document.getElementById('electricity').value);
+    const meatMeals = parseFloat(document.getElementById('meatMeals').value);
+    const carEmissionFactor = 0.404; 
+    const electricityEmissionFactor = 0.92; 
+    const meatEmissionFactor = 7.2; 
+    const carEmissions = milesDriven * carEmissionFactor * 52; 
+    const electricityEmissions = electricity * electricityEmissionFactor * 12; 
+    const meatEmissions = meatMeals * meatEmissionFactor * 52; 
+    const totalEmissions = carEmissions + electricityEmissions + meatEmissions;
+    document.getElementById('result').innerText = `Your  carbon footprint is approximately ${totalEmissions.toFixed(2)} kg CO₂.`;
+  }
+</script>
+
+</body>
+</html>
